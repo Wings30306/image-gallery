@@ -1,8 +1,8 @@
 const panels = document.querySelectorAll('.panel')
 
 function toggleOpen() {
-    panels.forEach(panel => panel.classList.remove("open"))
-    this.classList.add('open')
+    panels.forEach(panel =>  (panel !== this) ? panel.classList.remove("open") : this.classList.toggle('open'))
+    
 }
 
 function toggleActive(e) {
